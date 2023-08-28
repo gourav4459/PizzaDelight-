@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIZZA DELIGHT</title>
+  <!-- Link To CSS -->
+  <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Extracted CSS from the provided service section */
+    html {
+        
+  scroll-behavior: smooth;
+}
+    .services {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .services .heading {
+        margin-bottom: 60px;
+    }
+
+    .services .heading span {
+        font-size: 24px;
+        color: #e74c3c;
+    }
+
+    .services .heading h2 {
+        font-size: 36px;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .services .servives-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .services .s-box {
+        text-align: center;
+    }
+
+    .services .s-box img {
+        max-width: 100%;
+        height: 300px;
+        border-radius: 20%;
+    }
+
+    .services .s-box h3 {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .services .s-box p {
+        margin-top: 10px;
+        color: #777;
+    }
+    .button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+    
+</style>
+<script type="text/javascript"> window.addEventListener('scroll', reveal);  function reveal(){ var reveals = document.querySelectorAll('.reveal');  for(var i = 0; i < reveals.length; i++){  var windowheight = window.innerHeight; var revealtop = reveals[i].getBoundingClientRect().top; var revealpoint = 150;  if(revealtop < windowheight - revealpoint){ reveals[i].classList.add('active'); } else{ reveals[i].classList.remove('active'); } } } </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <section class="home min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-0" id="home">
+        <div class="md:w-1/2 md:pr-16 text-center md:text-center mb-6 md:mb-0 reveal">
+            <h1 class="text-5xl md:text-6xl font-bold text-orange-500 mb-2" style="color: rgb(255, 180, 17); display: block; font-family: Poppins, sans-serif; font-size: 64px; font-weight: 700;">Pizza Delight</h1>
+            <h2 class="text-2xl md:text-3xl mb-4">The tasty pizza of your choice</h2>
+            <a href="#menu1" class="btn bg-orange-500 text-white py-2 px-6 rounded-full">View Menu</a>
+        </div>
+        <div class="md:w-1/2 flex justify-center md:justify-center reveal">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80.png" alt="" class="w-1/2 md:w-2/3 rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <section class="about py-16 px-6 md:px-0 scroll-reveal" id="about" style="padding: 142px;">
+        <div class="md:flex justify-between items-center gap-24 reveal">
+            <div class="about-img mb-6 md:w-2/5 md:mr-10">
+                <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" alt=""
+                    class="rounded-tl-lg rounded-tr-lg md:rounded-bl-lg md:rounded-tr-none md:rounded-br-lg w-full h-auto">
+            </div>
+            <div class="about-text md:w-3/5 reveal">
+                <span class="text-orange-500 font-semibold text-xl md:text-2xl">About Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">We make good and tasty pizzas</h2>
+                <p class="text-lg md:text-xl mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quo iure rem ducimus tenetur deserunt commodi doloribus, quibusdam vel fuga?</p>
+                <a href="#" class="btn bg-orange-500 text-white py-2 px-6 rounded-full">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="menu container mx-auto py-8" id="menu1">
+        <h1 class="text-xl font-bold mb-20" style="text-align: center; font-size: 30px;">All Pizzas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+            <% pizzas.forEach(function(pizza) { %>
+            <div class="w-full md:w-64 reveal">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg"><%= pizza.name %></h2>
+                    <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= pizza.size %></span>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= pizza.price %></span>
+                        <button data-pizza="<%= JSON.stringify(pizza) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+    
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Services</span>
+            <h2>We provide best food services</h2>
+        </div>
+
+        <div class="servives-container">
+            <!-- Box 1 -->
+            <div class="s-box reveal">
+                <img src="https://images.pexels.com/photos/280453/pexels-photo-280453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
+                <h3>You Order</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum temporibus.</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="s-box reveal">
+                <img src="https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
+                <h3>Shipping</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum temporibus.</p>
+            </div>
+            <!-- Box 3 -->
+            <div class="s-box reveal">
+                <img src="https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
+                <h3>Delivered</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum temporibus.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gradient-to-b from-gray-800 to-blue-800 text-white py-32 text-base">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="col-md-6 col-lg-3 about-footer">
+                    <h3 class="text-xl font-semibold mb-4">PIZZA DELIGHT</h3>
+                    <ul class="mb-8">
+                        <li class="relative mb-6">
+                            <a href="tel:(010) 1234 4321"><i class="fas fa-phone fa-flip-horizontal absolute left-0"></i>(010) 1234 4321</a>
+                        </li>
+                        <li class="relative">
+                            <i class="fas fa-map-marker-alt absolute left-0"></i>
+                            1 / 105 Bay Lights,<br />Lorem Ipsum,<br />LIC 3201
+                        </li>
+                    </ul>
+                    <a href="http://localhost:3300/#menu1" class="button-24" role="button"">Buy Now</a>
+                </div>
+                <div class="col-md-6 col-lg-2 page-more-info">
+                    <div class="footer-title">
+                        <h4 class="text-xl font-semibold">Page links</h4>
+                    </div>
+                    <ul class="mb-8">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 page-more-info">
+                    <div class="footer-title">
+                        <h4 class="text-xl font-semibold">More Info</h4>
+                    </div>
+                    <ul class="mb-8">
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Dolor sit amet</a></li>
+                        <li><a href="#">Consectetur Adipisicing</a></li>
+                        <li><a href="#">Ed do eiusmod tempor incididunt</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4 open-hours">
+                    <div class="footer-title">
+                        <h4 class="text-xl font-semibold">Open hours</h4>
+                        <ul class="footer-social float-right">
+                            <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td><i class="far fa-clock"></i>Monday  </td>
+                                <td>9:00am - 5:00pm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="far fa-clock"></i>Friday  </td>
+                                <td>9:00am - 4:00pm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="far fa-clock"></i>Saturday  </td>
+                                <td>9:00am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="far fa-clock"></i>Sunday  </td>
+                                <td>9:30am - 12:00pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr class="my-4">
+                    <div class="footer-logo">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://i.ibb.co/Ws5qKvF/20230825134756-fpdl-in-flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vec.jpg"></td>
+                                    <td><img src="https://i.ibb.co/Ws5qKvF/20230825134756-fpdl-in-flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vec.jpg"></td>
+                                    <td><img src="https://i.ibb.co/Ws5qKvF/20230825134756-fpdl-in-flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vec.jpg"></td>
+                                    <td><img src="https://i.ibb.co/Ws5qKvF/20230825134756-fpdl-in-flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vec.jpg"></td>
+                                    <td><img src="https://i.ibb.co/Ws5qKvF/20230825134756-fpdl-in-flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vec.jpg"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="footer-bottom">
+            <div class="flex">
+                <div class="w-1/3">
+                    <a href="">Privacy policy</a>
+                </div>
+                <div class="w-2/3 text-right">
+                    <p>Pizza Delight @ 2023 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    
+    <script>
+        const sr = ScrollReveal({
+          distance: '150px',
+          duration: 1500,
+          easing: 'ease-in-out',
+          origin: 'bottom',
+        });
+      
+        sr.reveal('.reveal', {
+          interval: 100,
+          reset: true,
+        });
+      </script>
+    
+    
+
+</body>
+</html>
